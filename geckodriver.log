@@ -1,0 +1,23 @@
+1536389352113	geckodriver	INFO	Listening on 127.0.0.1:51669
+1536389355261	mozprofile::profile	INFO	Using profile path C:\Users\pravins\AppData\Local\Temp\rust_mozprofile.1qj05rsMYkYq
+1536389355276	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
+1536389355611	geckodriver::marionette	INFO	Connecting to Marionette on localhost:51699
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs 0.0.0.0 and 0.0.0.0
+1536389359071	Marionette	INFO	Listening on port 51699
+1536389359498	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs 0.0.0.0 and 0.0.0.0
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+[Child 17660] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 345
+[Child 17660] WARNIN [nsIRDFRemoteDataSource.Flush]
+[NPAPI 3648] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 345
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************

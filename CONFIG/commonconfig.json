@@ -1,0 +1,27 @@
+{
+  "XPATH":{"dropdwonlandingpage_count":"//div[@id='nav-flyout-shopAll']/div[2]/span",
+    "dropdwonlandingpage_increment":"//div[@id='nav-flyout-shopAll']/div[2]/span[~]",
+    "shopbycataegoryelem":"//a[@id='nav-link-shopall']",
+    "yourorders_count":"//div[@id='nav-flyout-yourAccount']/div[2]/a",
+    "yourorders_increment":"//div[@id='nav-flyout-yourAccount']/div[2]/a[~]",
+    "yourorderelem":"//div[@id='nav-tools']/a[1]"
+  },
+  "UIDetails":{"amazon":"https://www.amazon.in",
+    "facebook":"https://www.facebook.com/",
+    "jquerywebsite":"http://jqueryui.com/droppable/#default"
+  },
+  "XPATHFB":
+  {"firstName":"//input[@name = 'firstname']",
+  "lastName":"//input[@name = 'lastname']",
+    "registration":"//input[@name='reg_email__']",
+    "mobileNo":"//div[@class='uiStickyPlaceholderInput openToggler uiStickyPlaceholderEmptyInput']/div[contains(text(),'Mobile number or email address')]",
+    "newPassword":"//Input[@name='reg_passwd__']",
+    "dayselect":"//Select[@name='birthday_day']",
+    "monthselect":"//Select[@name='birthday_month']",
+    "yearselect":"//Select[@name='birthday_year']",
+    "Gender":"//input[@type='radio']/following-sibling::label[contains(text(),'Male')]"
+
+
+  }
+}
+
