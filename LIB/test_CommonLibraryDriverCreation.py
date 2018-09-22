@@ -14,7 +14,7 @@ class test_CommonLibraryDriverCreation(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
         # self.driver.get(config_json["UIDetails"]["jquerywebsite"])
-        self.driver.get(config_json["UIDetails"]["amazon"])
+        # self.driver.get(config_json["UIDetails"]["jquerywebsite"])
 
 
     def tearDown(self):

@@ -21,9 +21,13 @@ with open(filename,"r") as f:
 #           "r") as f:
     config_json = json.load(f)
 
-class Dropdown(test_CommonLibraryDriverCreation,unittest.TestCase,GenericUIFunction):
+class draganddrop(test_CommonLibraryDriverCreation,unittest.TestCase,GenericUIFunction):
+
+    @pytest.mark.skip("Dont want to Execute")
 
     def test_drag_drop(self):
+        self.driver.get(config_json["UIDetails"]["jquerywebsite"])
+
         self.driver.maximize_window()
         self.WaitUntilElementFound("//a[contains(text(),'Droppable')]")
         time.sleep(5)
@@ -44,6 +48,53 @@ class Dropdown(test_CommonLibraryDriverCreation,unittest.TestCase,GenericUIFunct
         time.sleep(2)
         self.ClickElement("//a[contains(text(),'Draggable')]")
 
+
+    @pytest.mark.skip("Dont want to Execute")
+    def test_switch_to_window(self):
+        self.driver.get(config_json["UIDetails"]["jquerywebsite"])
+        self.driver.maximize_window()
+        print "Google is Opened"
+        self.driver.execute_script("window.open('http://www.google.com/','New Window')")
+        self.driver.switch_to_window(self.driver.window_handles[0])
+        self.driver.get("http://www.google.com/")
+        self.driver.execute_script("window.open('http://www.facebook.com/','New Window')")
+        self.driver.switch_to_window(self.driver.window_handles[1])
+        self.driver.get("http://www.facebook.com/")
+        self.driver.execute_script("window.open('http://www.amazon.com/','New Window')")
+        self.driver.switch_to_window(self.driver.window_handles[2])
+        self.driver.get("http://www.amazon.com/")
         time.sleep(30)
+    @pytest.mark.skip("Dont want to Execute")
+
+    def test_window_popup(self):
+        self.driver.get("https://www.hdfcbank.com/")
+        self.driver.maximize_window()
+        print "HDFC website has been opened"
+        mainwindowid = self.driver.current_window_handle
+        self.ClickElement("//a[@class='homeloginbtn']")
+        print self.driver.current_window_handle
+        for handle in self.driver.window_handles:
+            print "handles are", handle
+            if handle != mainwindowid:
+                popupwindowid = handle
+                print "popupwindowid", popupwindowid
+                self.driver.switch_to_window(popupwindowid)
+                self.ClickElement("//div[@class='container']/div[@class='pdtb25 text-center']/a[contains(text(),'Continue to NetBanking')]")
+
+        time.sleep(5)
+
+    def test_alert_window(self):
+        self.driver.get("https://www.rediff.com/")
+        self.driver.maximize_window()
+        self.WaitUntilElementFound("//u[contains(text(),'rediff')]")
+        self.ClickElement("//u[contains(text(),'rediff')]")
+        self.WaitUntilElementFound("//input[@name='proceed']")
+        self.ClickElement("//input[@name='proceed']")
+        alert = self.driver.switch_to_alert()
+        print alert.text
+        alert.accept()
+
+        time.sleep(10)
+
 
 

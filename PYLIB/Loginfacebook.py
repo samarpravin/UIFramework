@@ -20,6 +20,8 @@ with open(filename,"r") as f:
 
 class test_login_facebook(test_CommonLibraryDriverCreation,GenericUIFunction,unittest.TestCase):
     def test_signupFacebook(self):
+        self.driver.get(config_json["UIDetails"]["facebook"])
+
         self.driver.maximize_window()
         self.WaitUntilElementFound(config_json["XPATHFB"]["firstName"])
         self.InputElement(config_json["XPATHFB"]["firstName"],"PK")

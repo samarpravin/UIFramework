@@ -24,6 +24,8 @@ with open(filename,"r") as f:
 class AmazonLogin(test_CommonLibraryDriverCreation,unittest.TestCase,GenericUIFunction):
     @pytest.mark.skip("Dont want to Execute")
     def test_dropdown_landingpage(self):
+        self.driver.get(config_json["UIDetails"]["amazon"])
+
         self.login_Amazon()
         self.WaitUntilElementFound(config_json["XPATH"]["shopbycataegoryelem"])
         self.mouse_over(config_json["XPATH"]["shopbycataegoryelem"])
@@ -33,6 +35,8 @@ class AmazonLogin(test_CommonLibraryDriverCreation,unittest.TestCase,GenericUIFu
 
     @pytest.mark.skip("Dont want to Execute")
     def test_dropdown_yourorders(self):
+        self.driver.get(config_json["UIDetails"]["amazon"])
+
         self.login_Amazon()
         self.WaitUntilElementFound(config_json["XPATH"]["yourorderelem"])
         self.mouse_over(config_json["XPATH"]["yourorderelem"])
@@ -42,12 +46,16 @@ class AmazonLogin(test_CommonLibraryDriverCreation,unittest.TestCase,GenericUIFu
 
     @pytest.mark.skip("Dont want to Execute")
     def test_click_signout(self):
+        self.driver.get(config_json["UIDetails"]["amazon"])
+
         self.login_Amazon()
         self.WaitUntilElementFound(config_json["XPATH"]["yourorderelem"])
         self.mouse_over(config_json["XPATH"]["yourorderelem"])
         self.click_specific_dropdown_value(config_json["XPATH"]["yourorders_count"],config_json["XPATH"]["yourorders_increment"],"Sign Out")
 
     def test_Navigate_to_Element_by_Action_Chains(self):
+        self.driver.get(config_json["UIDetails"]["amazon"])
+
         self.login_Amazon()
         self.WaitUntilElementFound("//a[@id='nav-link-shopall']")
         self.mouse_over("//a[@id='nav-link-shopall']")
