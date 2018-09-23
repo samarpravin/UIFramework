@@ -49,7 +49,6 @@ class draganddrop(test_CommonLibraryDriverCreation,unittest.TestCase,GenericUIFu
         self.ClickElement("//a[contains(text(),'Draggable')]")
 
 
-    @pytest.mark.skip("Dont want to Execute")
     def test_switch_to_window(self):
         self.driver.get(config_json["UIDetails"]["jquerywebsite"])
         self.driver.maximize_window()
@@ -63,8 +62,7 @@ class draganddrop(test_CommonLibraryDriverCreation,unittest.TestCase,GenericUIFu
         self.driver.execute_script("window.open('http://www.amazon.com/','New Window')")
         self.driver.switch_to_window(self.driver.window_handles[2])
         self.driver.get("http://www.amazon.com/")
-        time.sleep(30)
-    @pytest.mark.skip("Dont want to Execute")
+        time.sleep(5)
 
     def test_window_popup(self):
         self.driver.get("https://www.hdfcbank.com/")

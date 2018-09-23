@@ -26,6 +26,7 @@ class AmazonLogin(test_CommonLibraryDriverCreation,unittest.TestCase,GenericUIFu
     def test_dropdown_landingpage(self):
         self.driver.get(config_json["UIDetails"]["amazon"])
 
+
         self.login_Amazon()
         self.WaitUntilElementFound(config_json["XPATH"]["shopbycataegoryelem"])
         self.mouse_over(config_json["XPATH"]["shopbycataegoryelem"])
@@ -33,7 +34,6 @@ class AmazonLogin(test_CommonLibraryDriverCreation,unittest.TestCase,GenericUIFu
         print value
         return value
 
-    @pytest.mark.skip("Dont want to Execute")
     def test_dropdown_yourorders(self):
         self.driver.get(config_json["UIDetails"]["amazon"])
 
@@ -44,7 +44,6 @@ class AmazonLogin(test_CommonLibraryDriverCreation,unittest.TestCase,GenericUIFu
         print value
         return value
 
-    @pytest.mark.skip("Dont want to Execute")
     def test_click_signout(self):
         self.driver.get(config_json["UIDetails"]["amazon"])
 
