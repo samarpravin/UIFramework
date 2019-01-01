@@ -1,3 +1,7 @@
 {
-  "AmazonLogin.py::AmazonLogin::test_Navigate_to_Element_by_Action_Chains": true
+  "AmazonLogin.py::AmazonLogin::test_Navigate_to_Element_by_Action_Chains": true, 
+  "test_AmazonLogin.py::AmazonLogin::test_Navigate_to_Element_by_Action_Chains": true, 
+  "test_AmazonLogin.py::AmazonLogin::test_click_signout": true, 
+  "test_Loginfacebook.py::test_login_facebook::test_signupFacebook": true, 
+  "test_jquerywebsite.py::draganddrop::test_alert_window": true
 }

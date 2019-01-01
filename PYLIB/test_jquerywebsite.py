@@ -47,7 +47,7 @@ class draganddrop(test_CommonLibraryDriverCreation,unittest.TestCase,GenericUIFu
         self.driver.switch_to.default_content() #it will switch to main window
         time.sleep(2)
         self.ClickElement("//a[contains(text(),'Draggable')]")
-
+    @pytest.mark.skip("Dont want to Execute")
 
     def test_switch_to_window(self):
         self.driver.get(config_json["UIDetails"]["jquerywebsite"])
@@ -63,6 +63,7 @@ class draganddrop(test_CommonLibraryDriverCreation,unittest.TestCase,GenericUIFu
         self.driver.switch_to_window(self.driver.window_handles[2])
         self.driver.get("http://www.amazon.com/")
         time.sleep(5)
+    @pytest.mark.skip("Dont want to Execute")
 
     def test_window_popup(self):
         self.driver.get("https://www.hdfcbank.com/")
@@ -90,6 +91,7 @@ class draganddrop(test_CommonLibraryDriverCreation,unittest.TestCase,GenericUIFu
         self.ClickElement("//input[@name='proceed']")
         alert = self.driver.switch_to_alert()
         print alert.text
+        time.sleep(10)
         alert.accept()
 
         time.sleep(10)
