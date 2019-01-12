@@ -16,9 +16,6 @@ basedir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 print basedir
 filename = os.path.join(basedir + '\\CONFIG\\commonconfig.json')
 with open(filename,"r") as f:
-
-# with open("C:\Users\pravin\PycharmProjects\Framework_Genric\CONFIG\commonconfig.json",
-#           "r") as f:
     config_json = json.load(f)
 
 class draganddrop(test_CommonLibraryDriverCreation,unittest.TestCase,GenericUIFunction):

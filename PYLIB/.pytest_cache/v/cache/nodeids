@@ -1,3 +1,6 @@
 [
-  "test_Loginfacebook.py::test_login_facebook::test_signupFacebook"
+  "test_jquerywebsite.py::draganddrop::test_alert_window", 
+  "test_jquerywebsite.py::draganddrop::test_drag_drop", 
+  "test_jquerywebsite.py::draganddrop::test_switch_to_window", 
+  "test_jquerywebsite.py::draganddrop::test_window_popup"
 ]
