@@ -1,3 +1,5 @@
 {
-  "AmazonLogin.py::AmazonLogin::test_Navigate_to_Element_by_Action_Chains": true
+  "AmazonLogin.py::AmazonLogin::test_Navigate_to_Element_by_Action_Chains": true, 
+  "test_Loginfacebook.py::test_CommonLibraryDriverCreation": true, 
+  "test_Loginfacebook.py::test_login_facebook": true
 }
